@@ -3,6 +3,7 @@ Growup::Application.routes.draw do
 
   get "top/about"
 
+  root :to => "top#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
