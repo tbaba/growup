@@ -1,9 +1,22 @@
 !!!
 %html
-%head
-  %title Growup
-  = stylesheet_link_tag :all
-  = javascript_include_tag :defaults
-  = csrf_meta_tag
+  %head
+    %title Growup
+    = stylesheet_link_tag :all
+    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+    = javascript_include_tag :all
 
-= yield
+    = csrf_meta_tag
+
+  %body
+    .header
+      %h1= 'growup'
+      .user_info
+        = link_to 'Tatsuro BABA', '#'
+        = link_to '編集する', '#'
+
+    .contents
+      #left_col
+
+      #right_col
+        = yield
