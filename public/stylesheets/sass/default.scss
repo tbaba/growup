@@ -20,3 +20,17 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
     font-size:1.2em;
   }
 }
+
+.contents {
+  clear:both;
+  width:720px;
+  #left_col {
+    float:left;
+    width:200px;
+  }
+
+  #right_col {
+    float:right;
+    width:500px;
+  }
+}
