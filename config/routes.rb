@@ -1,6 +1,9 @@
 Growup::Application.routes.draw do
   # authentication callback
-  get "auth/:provider/callback" => "sessions#new"
+  get "auth/:provider/callback" => "users#new"
+
+  resources :users
+  match 'logout' => 'users#logout', :as => 'logout'
 
   # top controllers
   get "top/index"

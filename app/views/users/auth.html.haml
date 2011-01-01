@@ -1,4 +1,4 @@
-= form_for @user do |f|
+= form_for :user do |f|
   %p
     = f.label "ユーザー名を設定してください"
     = f.text_field :name, :value => @user.name

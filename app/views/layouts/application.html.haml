@@ -12,8 +12,12 @@
     .header
       %h1= 'growup'
       .user_info
-        = link_to 'Tatsuro BABA', '#'
-        = link_to '編集する', '#'
+        - if current_user
+          = link_to current_user.name, current_user
+          = link_to 'logout', logout_path
+
+        - else
+          = link_to 'login with twitter', 'auth/twitter'
 
     .contents
       #left_col

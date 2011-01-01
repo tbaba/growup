@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       redirect_to :root
     else
       flash[:notice] = "registration fail..."
-      render :auth
+      render :new
     end
   end
 
