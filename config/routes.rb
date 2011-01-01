@@ -1,6 +1,9 @@
 Growup::Application.routes.draw do
-  get "top/index"
+  # authentication callback
+  get "auth/:provider/callback" => "sessions#new"
 
+  # top controllers
+  get "top/index"
   get "top/about"
 
   root :to => "top#index"
