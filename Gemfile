@@ -7,8 +7,10 @@ gem 'haml'
 gem 'omniauth'
 
 group :development, :test do
+  gem 'autotest'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'webmock'
 end
