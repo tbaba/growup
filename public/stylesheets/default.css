@@ -10,18 +10,44 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
   margin: 0 auto; }
   .header h1 {
     float: left;
-    font-size: 3em;
+    font-size: 4em;
     letter-spacing: -3px; }
+    .header h1 span {
+      margin-left: -7px;
+      font-weight: normal;
+      letter-spacing: -1px;
+      font-size: 20px !important; }
   .header .user_info {
     float: right;
     font-size: 1.2em; }
 
 .contents {
   clear: both;
-  width: 720px; }
+  width: 720px;
+  margin: 0 auto; }
   .contents #left_col {
     float: left;
     width: 200px; }
+    .contents #left_col .login_by.twitter {
+      border: 1px solid #666;
+      padding: 1em 3px;
+      font-size: 1em;
+      text-align: center;
+      background: -moz-linear-gradient(top, #f0f0f0, #c9c9c9);
+      background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#c9c9c9)); }
+      .contents #left_col .login_by.twitter:hover {
+        background: -moz-linear-gradient(top, #c9c9c9, #f0f0f0);
+        background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#f0f0f0)); }
+    .contents #left_col .logined {
+      border: 1px solid #666; }
+      .contents #left_col .logined .user {
+        background: #F0F0F0; }
   .contents #right_col {
     float: right;
     width: 500px; }
+    .contents #right_col dl.what_growup dt {
+      border: 1px solid #666;
+      text-align: center;
+      font-size: 1.3em; }
+    .contents #right_col dl.what_growup dd {
+      margin: 5px 2em; }

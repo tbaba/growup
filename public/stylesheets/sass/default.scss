@@ -11,9 +11,14 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
   margin: 0 auto;
   h1 {
     float:left;
-    font-size:3em;
+    font-size:4em;
     letter-spacing:-3px;
-    
+    span {
+      margin-left:-7px;
+      font-weight:normal;
+      letter-spacing:-1px;
+      font-size:20px !important;
+    }
   }
   .user_info {
     float:right;
@@ -24,13 +29,44 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
 .contents {
   clear:both;
   width:720px;
+  margin: 0 auto;
   #left_col {
     float:left;
     width:200px;
+    .login_by {
+      &.twitter {
+        border:1px solid #666;
+        padding:1em 3px;
+        font-size:1em;
+        text-align:center;
+        background: -moz-linear-gradient(top, #F0F0F0, #C9C9C9);
+        background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#C9C9C9));
+        &:hover {
+          background: -moz-linear-gradient(top, #C9C9C9, #F0F0F0);
+          background: -webkit-gradient(linear, left top, left bottom, from(#C9C9C9), to(#F0F0F0));
+        }
+      }
+    }
+    .logined {
+      border:1px solid #666;
+      .user {
+        background:#F0F0F0;
+      }
+    }
   }
 
   #right_col {
     float:right;
     width:500px;
+    dl.what_growup {
+      dt {
+        border:1px solid #666;
+        text-align:center;
+        font-size:1.3em;
+      }
+      dd {
+        margin:5px 2em;
+      }
+    }
   }
 }

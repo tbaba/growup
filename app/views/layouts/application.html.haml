@@ -10,17 +10,20 @@
 
   %body
     .header
-      %h1= 'growup'
+      %h1
+        growup
+        %span beta
       .user_info
         - if current_user
           = link_to current_user.name, current_user
           = link_to 'logout', logout_path
 
-        - else
-          = link_to 'login with twitter', 'auth/twitter'
-
     .contents
       #left_col
+        - if current_user
+          = render :partial => 'shared/sidebar_logined'
+        - else
+          = render :partial => 'shared/sidebar_register'
 
       #right_col
         = yield
