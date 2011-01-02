@@ -1,4 +1,6 @@
 Growup::Application.routes.draw do
+  resources :projects
+
   # authentication callback
   get "auth/:provider/callback" => "users#new"
 
