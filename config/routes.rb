@@ -7,7 +7,9 @@ Growup::Application.routes.draw do
 
   resources :projects
   resources :users do
-    resources :projects
+    resources :projects do
+      resources :tasks
+    end
   end
 
   match 'logout' => 'users#logout', :as => 'logout'
