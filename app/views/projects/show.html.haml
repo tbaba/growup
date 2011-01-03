@@ -1,8 +1,15 @@
 .project
   %p.title
     = @project.title
+    %span.progress= '20%'
   %p.detail
     = @project.detail
+
+  %p.actions
+    = link_to raw("#{image_tag('/images/edit.png', :size => '14x14')}編集する"), edit_project_path(@project)
+    = link_to raw("#{image_tag('/images/delete.png', :size => '14x14')}削除する"), project_path(@project), :method => :delete, :confirm => '削除すると二度と復旧できません。本当に削除しますか？'
+
+
 
   .tasks
     - @project.tasks.each do |task|
@@ -23,6 +30,3 @@
         = f.hidden_field :project_id, :value => @project.id
         = f.submit
 
-  %p.actions
-    = link_to raw("#{image_tag('/images/edit.png', :size => '14x14')}編集する"), edit_project_path(@project)
-    = link_to raw("#{image_tag('/images/delete.png', :size => '14x14')}削除する"), project_path(@project), :method => :delete, :confirm => '削除すると二度と復旧できません。本当に削除しますか？'
