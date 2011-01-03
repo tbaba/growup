@@ -5,5 +5,5 @@
     = @project.detail
 
   %p.actions
-    = link_to 'Edit', edit_project_path(@project)
-    = link_to '削除する', project_path(@project), :method => :delete, :confirm => '削除すると二度と復旧できません。本当に削除しますか？'
+    = link_to raw("#{image_tag('/images/edit.png', :size => '14x14')}編集する"), edit_project_path(@project)
+    = link_to raw("#{image_tag('/images/delete.png', :size => '14x14')}削除する"), project_path(@project), :method => :delete, :confirm => '削除すると二度と復旧できません。本当に削除しますか？'

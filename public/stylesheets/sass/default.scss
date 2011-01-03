@@ -194,6 +194,10 @@ a {
           @include radius(3px);
           padding:3px;
         }
+        &.actions {
+          margin:1em 2px 0 auto;
+          text-align:right;
+        }
       }
     }
   }

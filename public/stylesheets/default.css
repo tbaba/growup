@@ -157,3 +157,6 @@ a {
         -moz-border-radius: 3px;
         border-radius: 3px;
         padding: 3px; }
+      .contents #right_col .project p.actions {
+        margin: 1em 2px 0 auto;
+        text-align: right; }

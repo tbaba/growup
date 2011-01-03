@@ -23,6 +23,8 @@
         %p= link_to "#{project.title}", [current_user, project]
         .dates
           = "作成 : #{date_tokyo(project.created_at)}"
+          <br>
+          = "更新 : #{date_tokyo(project.updated_at)}"
       .project_status
         = "達成率"
         %p= "80%"
