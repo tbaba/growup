@@ -110,6 +110,15 @@ a {
     float:right;
     width:500px;
 
+    #notice {
+      @include radius(5px);
+      font-size:2em;
+      text-align:center;
+      margin:1em auto;
+      border:1px solid #666;
+      padding:5px;
+      background:#E3E8F1;
+    }
     .new_user {
       width:70%;
       input#user_name {
@@ -156,17 +165,18 @@ a {
       }
       .field {
         margin:1em auto;
-        font-size:1.2em;
-        border:1px solid #666;
         padding:5px;
+        label {
+          font-size:1.5em;
+        }
         p.description {
-          font-size:0.6em;
+          font-size:0.8em;
         }
         &.title input {
-            font-size:1.5em;
+            font-size:1.8em;
         }
         &.detail textarea {
-            font-size:1em;
+            font-size:1.2em;
         }
       }
     }
@@ -188,6 +198,8 @@ a {
         @include radius(5px);
         border:1px dotted #999;
         padding:5px;
+        margin-top:-1px;
+        margin-right:-2px;
         float:right;
         p {
           font-size:3em;
