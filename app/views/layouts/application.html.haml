@@ -10,9 +10,7 @@
 
   %body
     .header
-      %h1
-        growup
-        %span beta
+      %h1= image_tag('/images/logo.png')
       .user_info
         - if current_user
           = link_to current_user.name, current_user
