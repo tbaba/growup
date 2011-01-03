@@ -12,9 +12,13 @@
 
 
   .tasks
+    %h3 作業一覧
     - @project.tasks.each do |task|
       .task
-        = task.title
+        %span.task_name= task.title
+        %span.done{:class => task.done? ? '' : 'not_yet'}
+          = task.done? ? image_tag('/images/success.png', :size => '16x16') : '未完成'
+        %span.delete= link_to '削除する', task, :method => :delete, :confirm => '一度削除すると二度と復旧できません。削除しますか？'
 
     - form_for Task.new do |f|
       .description

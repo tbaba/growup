@@ -2,6 +2,7 @@
   -webkit-border-radius: $val;
   -moz-border-radius: $val;
   border-radius: $val;
+  padding: $val;
 }
 
 body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img {
@@ -49,7 +50,7 @@ a {
       &.twitter {
         @include radius(4px);
         border:1px solid #666;
-        padding:1em 3px;
+        padding:1em 3px !important;
         font-size:1em;
         text-align:center;
         background: -moz-linear-gradient(top, #F0F0F0, #C9C9C9);
@@ -63,7 +64,6 @@ a {
     .logined {
       @include radius(4px);
       border:1px solid #666;
-      padding:4px;
       background:#F0F0F0;
     }
     .nav {
@@ -116,7 +116,6 @@ a {
       text-align:center;
       margin:0 auto 1em auto;
       border:1px solid #666;
-      padding:5px;
       background:#E3E8F1;
     }
     .new_user {
@@ -183,7 +182,6 @@ a {
 
     .project_summary {
       @include radius(5px);
-      padding:5px;
       margin:0 auto;
       border:1px solid #666;
       height:70px;
@@ -197,7 +195,6 @@ a {
       .project_status {
         @include radius(5px);
         border:1px dotted #999;
-        padding:5px;
         margin-top:-1px;
         margin-right:-2px;
         float:right;
@@ -211,7 +208,6 @@ a {
       margin:0 auto;
       border:1px solid #666;
       @include radius(5px);
-      padding:5px;
       p {
         &.title {
           font-size:2em;
@@ -223,7 +219,6 @@ a {
           width:480px;
           border:1px solid #999;
           @include radius(3px);
-          padding:3px;
         }
         &.actions {
           margin:1em 2px 0 auto;
@@ -231,7 +226,28 @@ a {
         }
       }
       .tasks {
+        .task {
+          clear:both;
+          span.task_name {
+            float:left;
+            font-size:1.2em;
+          }
+          span.done {
+            float:left;
+            &.not_yet {
+              font-size:0.7em;
+              @include radius(3px);
+              background:#CE8686;
+              color:white;
+            }
+          }
+          span.delete {
+            float:right;
+            font-size:0.8em;
+          }
+        }
         .new_task {
+          clear:both;
           .description {
             font-size:1.5em;
             border:1px solid #666;
