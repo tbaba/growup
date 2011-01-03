@@ -114,7 +114,7 @@ a {
       @include radius(5px);
       font-size:2em;
       text-align:center;
-      margin:1em auto;
+      margin:0 auto 1em auto;
       border:1px solid #666;
       padding:5px;
       background:#E3E8F1;
@@ -228,6 +228,26 @@ a {
         &.actions {
           margin:1em 2px 0 auto;
           text-align:right;
+        }
+      }
+      .tasks {
+        .new_task {
+          .description {
+            font-size:1.5em;
+            border:1px solid #666;
+            @include radius(5px);
+            padding:5px;
+          }
+          table.fields {
+            margin:0 auto;
+            .field {
+              margin:auto;
+              font-size:1em !important;
+              border:0;
+              text-align:right;
+              height:40px;
+            }
+          }
         }
       }
     }

@@ -86,6 +86,16 @@ a {
       .contents #right_col h2 p {
         margin-top: 1em;
         font-size: 2em; }
+    .contents #right_col #notice {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-size: 2em;
+      text-align: center;
+      margin: 0 auto 1em auto;
+      border: 1px solid #666;
+      padding: 5px;
+      background: #E3E8F1; }
     .contents #right_col .new_user {
       width: 70%; }
       .contents #right_col .new_user input#user_name {
@@ -119,15 +129,15 @@ a {
             background: #C9C9C9; }
       .contents #right_col form .field {
         margin: 1em auto;
-        font-size: 1.2em;
-        border: 1px solid #666;
         padding: 5px; }
-        .contents #right_col form .field p.description {
-          font-size: 0.6em; }
-        .contents #right_col form .field.title input {
+        .contents #right_col form .field label {
           font-size: 1.5em; }
+        .contents #right_col form .field p.description {
+          font-size: 0.8em; }
+        .contents #right_col form .field.title input {
+          font-size: 1.8em; }
         .contents #right_col form .field.detail textarea {
-          font-size: 1em; }
+          font-size: 1.2em; }
     .contents #right_col .project_summary {
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -147,6 +157,8 @@ a {
         border-radius: 5px;
         border: 1px dotted #999;
         padding: 5px;
+        margin-top: -1px;
+        margin-right: -2px;
         float: right; }
         .contents #right_col .project_summary .project_status p {
           font-size: 3em; }
@@ -172,3 +184,18 @@ a {
       .contents #right_col .project p.actions {
         margin: 1em 2px 0 auto;
         text-align: right; }
+      .contents #right_col .project .tasks .new_task .description {
+        font-size: 1.5em;
+        border: 1px solid #666;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 5px; }
+      .contents #right_col .project .tasks .new_task table.fields {
+        margin: 0 auto; }
+        .contents #right_col .project .tasks .new_task table.fields .field {
+          margin: auto;
+          font-size: 1em !important;
+          border: 0;
+          text-align: right;
+          height: 40px; }
