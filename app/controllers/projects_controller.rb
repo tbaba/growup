@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(params[:project])
 
     if @project.save
-      redirect_to @project, :notice => 'Project was successfully created.'
+      redirect_to @project, :notice => '目標の作成に成功しました!!'
     else
       render :action => "new"
     end
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.update_attributes(params[:project])
-      redirect_to @project, :notice => 'Project was successfully updated.'
+      redirect_to @project, :notice => '目標の更新に成功しました!!'
     else
       render :action => "edit"
     end
