@@ -28,7 +28,7 @@ a {
 .contents {
   clear: both;
   width: 720px;
-  margin: 0 auto; }
+  margin: 0 auto 1em auto; }
   .contents #left_col {
     float: left;
     width: 200px; }
@@ -222,3 +222,9 @@ a {
             border: 0;
             text-align: right;
             height: 40px; }
+
+.footer {
+  width: 720px;
+  clear: both;
+  margin: 1em auto;
+  border-top: 1px dotted #666; }
