@@ -6,3 +6,6 @@
   %ul.new_project
     %li
       %p= link_to '新しく目標を作る', new_user_project_url(current_user)
+    - current_user.projects.each do |project|
+      %li
+        %p= link_to project.title, project
