@@ -1,12 +1,10 @@
-- @user = current_user
-
 .logined
   .user
-    = @user.name
+    = current_user.name
 
 .nav
   %ul.new_project
     %li
-      %p= link_to '新しく目標を作る', '#'
+      %p= link_to '新しく目標を作る', new_user_project_url(current_user)
     %li
       %p= link_to '目標に作業を設定する', '#'

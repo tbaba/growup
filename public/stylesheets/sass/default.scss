@@ -1,4 +1,4 @@
-body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
+body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
   border: 0;
   margin: 0;
   padding: 0;
@@ -72,8 +72,16 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
             background: -webkit-gradient(linear, left top, left bottom, from(#C9C9C9), to(#F0F0F0));
           }
           p {
-            margin-top:1em;
-            font-size:1.5em;
+            margin-top:1.5em;
+            a {
+              font-size:1.5em;
+              color:#333;
+              text-decoration:none;
+              &:hover {
+                color:#111;
+                text-decoration:underline;
+              }
+            }
           }
         }
       }
@@ -81,6 +89,17 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
   }
 
   #right_col {
+    h2 {
+      margin:0 auto 1em auto;
+      text-align:center;
+      border:1px solid #666;
+      height:6em;
+      background:#F4F4F4;
+      p {
+        margin-top:1em;
+        font-size:2em;
+      }
+    }
     float:right;
     width:500px;
     dl.what_growup {
@@ -91,6 +110,38 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
       }
       dd {
         margin:5px 2em;
+      }
+    }
+    form {
+      width:70%;
+      margin:0 auto;
+      .actions { 
+        text-align:center;
+        input {
+          border:1px solid #666;
+          width:50%;
+          background:#F0F0F0;
+          &:hover {
+            background:#C9C9C9;
+          }
+        }
+      }
+      .field {
+        margin:1em auto;
+        font-size:1.2em;
+        p.description {
+          font-size:0.6em;
+        }
+        &.title input {
+            font-size:1.5em;
+            border:1px solid #666;
+            padding:5px;
+        }
+        &.detail textarea {
+            font-size:1em;
+            border:1px solid #666;
+            padding:3px;
+        }
       }
     }
   }

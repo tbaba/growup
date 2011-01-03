@@ -6,14 +6,20 @@
         - @project.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :detail
-    = f.text_area :detail
-  .field
-    = f.label :user
-    = f.text_field :user
+  .field.title
+    %p
+      = f.label :title, "目標の名前"
+      %p.description
+        目標に分かりやすい名前を設定しましょう。
+    = f.text_field :title, :size => 20
+
+  .field.detail
+    %p
+      =f.label :detail, "詳しい内容"
+      %p.description
+        他人から見ても分かりやすく、目標の内容を書きましょう。
+    = f.text_area :detail, :cols => 40, :rows => 5
+
   .actions
+    = f.hidden_field :user, :value => current_user.id
     = f.submit 'Save'

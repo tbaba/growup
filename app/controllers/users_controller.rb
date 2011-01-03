@@ -5,12 +5,13 @@ class UsersController < ApplicationController
 
   def new
     auths = env['rack.auth']
+    p auths.inspect
     if @user = User.find_by_uid(auths['uid'])
       session[:user_id] = @user.uid
       flash[:notice] = "login SUCCESS!!"
       redirect_to :root
     else
-      @user = User.new :uid => auths['uid'], :name => auths['user_info']['user_name'], :provider => auths['provider']
+      @user = User.new :uid => auths['uid'], :name => auths['user_info']['name'], :provider => auths['provider']
     end
   end
 
