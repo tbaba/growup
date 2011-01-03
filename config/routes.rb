@@ -1,5 +1,7 @@
 Growup::Application.routes.draw do
 
+  resources :tasks
+
   # authentication callback
   get "auth/:provider/callback" => "users#new"
 
