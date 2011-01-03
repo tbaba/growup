@@ -7,7 +7,7 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
 
 .header {
   width: 720px;
-  margin: 0 auto; }
+  margin: 0 auto 1em auto; }
   .header h1 {
     float: left;
     font-size: 4em;
@@ -42,6 +42,16 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
       border: 1px solid #666; }
       .contents #left_col .logined .user {
         background: #F0F0F0; }
+    .contents #left_col .nav ul {
+      list-style: none;
+      margin: 0; }
+      .contents #left_col .nav ul li {
+        text-align: center;
+        width: 198px;
+        height: 5em;
+        margin: 1em 0 0 -40px;
+        padding: 0;
+        border: 1px solid #666; }
   .contents #right_col {
     float: right;
     width: 500px; }
