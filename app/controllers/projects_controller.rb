@@ -1,22 +1,18 @@
 class ProjectsController < ApplicationController
-  def index
-    @projects = Project.all
-  end
-
   def show
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
   end
 
   def new
-    @project = Project.new
+    @project = current_user.projects.new
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
   end
 
   def create
-    @project = Project.new(params[:project])
+    @project = current_user.projects.new(params[:project])
 
     if @project.save
       redirect_to @project, :notice => '目標の作成に成功しました!!'
@@ -26,7 +22,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
 
     if @project.update_attributes(params[:project])
       redirect_to @project, :notice => '目標の更新に成功しました!!'
@@ -36,9 +32,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
     @project.destroy
 
-    redirect_to projects_url
+    redirect_to root_url, :notice => "目標を削除しました。"
   end
 end
