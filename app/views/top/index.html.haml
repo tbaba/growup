@@ -1,6 +1,28 @@
-%h2
-  %p growupってなに？
+- if !current_user
+  %h2
+    %p growupってなに？
 
-%dl.what_growup
-  %dt.summary やりたいことへのゴールデンパス*1を達成するお手伝いをします。
-  %dd.detail 目標に対して、実行すべきことを書き並べ、それぞれに達成度を書いていくことで、日々の実行を眼に見える形で表示。埋めていく楽しさを味わいながら目標を達成していきましょう。
+  %dl.what_growup
+    %dt.summary やりたいことを達成するお手伝いをします。
+    %dd.detail
+      = '目標に対して、実行すべきことを書き並べ、それぞれに達成度を書いていくことで、日々の実行を目に見える形で表示。'
+      <br>
+      ~ '埋めていく楽しさを味わいながら目標を達成していきましょう。'
+    %dt.summary 入力は簡単、更新も簡単。
+    %dd.detail
+      = '目標設定のときに入力する項目はたったの二つ。'
+      <br>
+      ~ 'もちろん更新するのも簡単、コメントを残すのも簡単です。'
+- else
+  %h2
+    %p 目標一覧
+
+  - @projects.each do |project|
+    .project_summary
+      .project_info
+        %p= link_to "#{project.title}", [current_user, project]
+        .dates
+          = "作成 : #{date_tokyo(project.created_at)}"
+      .project_status
+        = "達成率"
+        %p= "80%"

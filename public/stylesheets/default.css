@@ -1,25 +1,29 @@
-body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
+body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img {
   border: 0;
   margin: 0;
   padding: 0;
   font-size: 12px;
   font-family: "Helvetica Neue", sans-serif, Arial, Verdana; }
 
+a {
+  color: #333;
+  text-decoration: none; }
+  a:hover {
+    color: #111;
+    text-decoration: underline; }
+
 .header {
   width: 720px;
   margin: 0 auto 1em auto; }
   .header h1 {
     float: left;
-    font-size: 4em;
-    letter-spacing: -3px; }
-    .header h1 span {
-      margin-left: -7px;
-      font-weight: normal;
-      letter-spacing: -1px;
-      font-size: 20px !important; }
+    width: 210px; }
   .header .user_info {
+    width: 510px;
     float: right;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    text-align: right;
+    border-bottom: 1px dotted #666; }
 
 .contents {
   clear: both;
@@ -29,6 +33,9 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
     float: left;
     width: 200px; }
     .contents #left_col .login_by.twitter {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
       border: 1px solid #666;
       padding: 1em 3px;
       font-size: 1em;
@@ -39,13 +46,19 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
         background: -moz-linear-gradient(top, #c9c9c9, #f0f0f0);
         background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#f0f0f0)); }
     .contents #left_col .logined {
-      border: 1px solid #666; }
-      .contents #left_col .logined .user {
-        background: #F0F0F0; }
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      border: 1px solid #666;
+      padding: 4px;
+      background: #F0F0F0; }
     .contents #left_col .nav ul {
       list-style: none;
       margin: 0; }
       .contents #left_col .nav ul li {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
         text-align: center;
         width: 198px;
         height: 5em;
@@ -60,12 +73,7 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
         .contents #left_col .nav ul li p {
           margin-top: 1.5em; }
           .contents #left_col .nav ul li p a {
-            font-size: 1.5em;
-            color: #333;
-            text-decoration: none; }
-            .contents #left_col .nav ul li p a:hover {
-              color: #111;
-              text-decoration: underline; }
+            font-size: 1.5em; }
   .contents #right_col {
     float: right;
     width: 500px; }
@@ -108,3 +116,44 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td, img, a {
           font-size: 1em;
           border: 1px solid #666;
           padding: 3px; }
+    .contents #right_col .project_summary {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 0 auto;
+      border: 1px solid #666;
+      height: 70px; }
+      .contents #right_col .project_summary .project_info {
+        float: left; }
+        .contents #right_col .project_summary .project_info a {
+          font-size: 2em;
+          font-weight: bold; }
+      .contents #right_col .project_summary .project_status {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px dotted #999;
+        padding: 5px;
+        float: right; }
+        .contents #right_col .project_summary .project_status p {
+          font-size: 3em; }
+    .contents #right_col .project {
+      margin: 0 auto;
+      border: 1px solid #666;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      padding: 5px; }
+      .contents #right_col .project p.title {
+        font-size: 2em;
+        border-bottom: 1px dotted #666; }
+      .contents #right_col .project p.detail {
+        font-size: 0.9em;
+        margin: 1em auto;
+        width: 480px;
+        border: 1px solid #999;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 3px; }

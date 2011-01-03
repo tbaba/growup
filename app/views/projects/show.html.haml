@@ -4,16 +4,6 @@
   %p.detail
     = @project.detail
 
-%p
-  %b Title:
-  = @project.title
-%p
-  %b Detail:
-  = @project.detail
-%p
-  %b User:
-  = @project.user
-
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
+  %p.actions
+    = link_to 'Edit', edit_project_path(@project)
+    = link_to '削除する', project_path(@project), :method => :delete, :confirm => '削除すると二度と復旧できません。本当に削除しますか？'
