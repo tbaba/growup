@@ -1,10 +1,11 @@
+%h2
+  %p 認証が完了しました。
 = form_for @user do |f|
   %p
     = f.label "ユーザー名を設定してください"
-    = f.text_field :name, :value => @user.name
+    = f.text_field :name, :value => @user.name, :size => 20
 
   = f.hidden_field :uid, :value => @user.uid
   = f.hidden_field :provider, :value => @user.provider
 
-  %p
-    = f.submit
+  .actions= f.submit

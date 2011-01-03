@@ -109,6 +109,27 @@ a {
     }
     float:right;
     width:500px;
+
+    .new_user {
+      width:70%;
+      input#user_name {
+        font-size:2em;
+      }
+      .actions {
+        text-align:center;
+        input#user_submit {
+          margin:1em auto;
+          height:2em;
+          border:1px solid #666;
+          width:50%;
+          background:#F0F0F0;
+          &:hover {
+            background:#C9C9C9;
+          }
+        }
+      }
+    }
+
     dl.what_growup {
       dt {
         border:1px solid #666;
@@ -136,18 +157,16 @@ a {
       .field {
         margin:1em auto;
         font-size:1.2em;
+        border:1px solid #666;
+        padding:5px;
         p.description {
           font-size:0.6em;
         }
         &.title input {
             font-size:1.5em;
-            border:1px solid #666;
-            padding:5px;
         }
         &.detail textarea {
             font-size:1em;
-            border:1px solid #666;
-            padding:3px;
         }
       }
     }
