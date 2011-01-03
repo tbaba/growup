@@ -51,7 +51,15 @@ body, div, p, span, h1, h2, h3, h4, h5, h6, table, th, tr, td {
         height: 5em;
         margin: 1em 0 0 -40px;
         padding: 0;
-        border: 1px solid #666; }
+        border: 1px solid #666;
+        background: -moz-linear-gradient(top, #f0f0f0, #c9c9c9);
+        background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#c9c9c9)); }
+        .contents #left_col .nav ul li:hover {
+          background: -moz-linear-gradient(top, #c9c9c9, #f0f0f0);
+          background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#f0f0f0)); }
+        .contents #left_col .nav ul li p {
+          margin-top: 1em;
+          font-size: 1.5em; }
   .contents #right_col {
     float: right;
     width: 500px; }
