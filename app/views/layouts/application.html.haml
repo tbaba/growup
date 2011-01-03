@@ -24,4 +24,6 @@
           = render :partial => 'shared/sidebar_register'
 
       #right_col
+        - if flash[:notice]
+          #notice= flash[:notice]
         = yield
