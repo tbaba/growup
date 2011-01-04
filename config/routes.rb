@@ -1,5 +1,7 @@
 Growup::Application.routes.draw do
 
+  resources :comments
+
   resources :tasks
 
   # authentication callback
