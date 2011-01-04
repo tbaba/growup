@@ -5,6 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
 gem 'rails3-generators'
 gem 'haml-rails'
+gem 'jquery-rails'
 
 gem 'omniauth'
 
