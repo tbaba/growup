@@ -1,16 +1,17 @@
 Growup::Application.routes.draw do
 
-  resources :comments
-
-  resources :tasks
-
   # authentication callback
   get "auth/:provider/callback" => "users#new"
 
   resources :projects
+  resources :comments
+  resources :tasks
+
   resources :users do
+    resources :comments
     resources :projects do
       resources :tasks
+      resources :comments
     end
   end
 
