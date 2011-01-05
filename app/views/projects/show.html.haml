@@ -20,7 +20,7 @@
           = task.done? ? image_tag('/images/success.png', :size => '16x16') : '未完成'
         %span.delete= link_to '削除する', task, :method => :delete, :confirm => '一度削除すると二度と復旧できません。削除しますか？'
 
-    - form_for Task.new do |f|
+    - form_for [current_user, @project, Task.new] do |f|
       .description
         作業を設定する
       %table.fields
@@ -31,6 +31,18 @@
           %th= f.label :detail, '内容'
           %td= f.text_field :detail
       .actions
-        = f.hidden_field :project_id, :value => @project.id
         = f.submit
 
+  .comments
+    - @project.comments.each do |comment|
+      .comment
+        = comment.body
+        ~ ' | '
+        = comment.user.name
+
+    - form_for [current_user, @project, Comment.new] do |f|
+      .description
+        コメントする
+      = f.text_field :body
+      .actions
+        = f.submit
